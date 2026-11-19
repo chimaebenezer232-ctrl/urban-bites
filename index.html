@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="en"> <head>     <meta charset="UTF-8">     <meta name="viewport" content="width=device-width, initial-scale=1.0">     <meta name="description" content="Urban Bites — Experience exceptional dining with delicious meals, fresh ingredients and unforgettable flavours.">
+
+
+<title>Urban Bites | Exceptional Dining Experience</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+    <body>
+
+
+        <!-- Website Header -->
+        <header class="header">
+            <nav class="navbar container">
+
+                <a href="#" class="logo">URBAN<span>BITES.</span></a>
+
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Our Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <a href="#menu" class="nav-button">Explore Menu</a>
+                <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </nav>
+        </header>
+
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- Hero Section -->
+            <section class="hero" id="home">
+
+                <div class="hero-content">
+
+                    <p class="hero-subtitle">WELCOME TO URBAN BITES</p>
+
+                    <h1>Good Food.<br>
+                        Great Moments.</h1>
+
+                    <p class="hero-description">
+                        Discover exceptional flavours, freshly prepared meals
+                        and an unforgettable dining experience.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#menu" class="primary-button">Explore Our Menu</a>
+                        <a href="#about" class="secondary-button">Discover More</a>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- About Section -->
+            <section class="about container" id="about">
+
+                <div class="about-image">
+                    <!-- Image will be added later -->
+                </div>
+
+                <div class="about-content">
+
+                    <p class="section-label">OUR STORY</p>
+
+                    <h2>More Than Just<br> A Restaurant.</h2>
+
+                    <p>
+                        At Urban Bites, we believe great food brings people
+                        together. Our kitchen combines fresh ingredients,
+                        creativity and passion to create memorable meals.
+                    </p>
+
+                    <a href="#menu" class="text-link">Discover Our Menu →</a>
+
+                </div>
+
+            </section>
+
+
+            <!-- Menu Section -->
+            <section class="menu container" id="menu">
+
+                        <div class="section-heading">
+                            <p class="section-label">OUR SPECIALTIES</p>
+                            <h2>Explore Our Menu</h2>
+                            <p>Carefully prepared dishes made to satisfy every craving.</p>
+                        </div>
+
+                    <div class="menu-grid">
+
+                        <div class="food-card">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=75&auto=format&fit=crop" alt="Classic beef burger" loading="lazy">
+                            <div class="food-info">
+                                <h3>Classic Beef Burger</h3>
+                                <p>Juicy grilled beef, fresh lettuce, cheese and our signature sauce.</p>
+                                <span>₦8,500</span>
+                                <div class="quantity-control">
+                                    <label for="quantity-burger">Quantity:</label>
+                                    <input type="number" id="quantity-burger" class="quantity-input" min="1" value="1">
+                                </div>
+                                <a href="#" class="order-button" data-food="Classic Beef Burger" data-price="8500"> Order on WhatsApp</a>
+                            </div>
+                        </div>
+
+                        <div class="food-card">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=75&auto=format&fit=crop" alt="Italian pizza" loading="lazy">
+                            <div class="food-info">
+                                <h3>Italian Special Pizza</h3>
+                                <p>Freshly baked pizza topped with cheese and delicious ingredients.</p>
+                                <span>₦12,000</span>
+                                <div class="quantity-control">
+                                    <label for="quantity-pizza">Quantity:</label>
+                                    <input type="number" id="quantity-pizza" class="quantity-input" min="1" value="1">  
+                                </div>
+                                <a href="#" class="order-button" data-food="Italian Special Pizza" data-price="12000"> Order on WhatsApp</a>
+                            </div>
+                        </div>
+
+                        <div class="food-card">
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=75&auto=format&fit=crop" alt="Garden fresh salad" loading="lazy">
+                            <div class="food-info">
+                                <h3>Garden Fresh Salad</h3>
+                                <p>A refreshing combination of fresh vegetables and special dressing.</p>
+                                <span>₦6,500</span>
+                                <div class="quantity-control">
+                                    <label for="quantity-salad">Quantity:</label>
+                                    <input type="number" id="quantity-salad" class="quantity-input" min="1" value="1">
+                                </div>
+                                <a href="#" class="order-button" data-food="Garden Fresh Salad" data-price="6500"> Order on WhatsApp</a>
+                            </div>
+                        </div>
+
+                        <div class="food-card">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=75&auto=format&fit=crop" alt="Grilled chicken" loading="lazy">
+                            <div class="food-info">
+                                <h3>Grilled Chicken</h3>
+                                <p>Tender grilled chicken seasoned with our special signature spices.</p>
+                                <span>₦10,000</span>
+                                <div class="quantity-control">
+                                    <label for="quantity-chicken">Quantity:</label>
+                                    <input type="number" id="quantity-chicken" class="quantity-input" min="1" value="1">
+                                </div>
+                                <a href="#" class="order-button" data-food="Grilled Chicken" data-price="10000"> Order on WhatsApp</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+            </section>
+
+
+            <!-- Gallery Section -->
+            <section class="gallery container" id="gallery">
+
+                <div class="section-heading">
+                    <p class="section-label">FOOD & MOMENTS</p>
+                    <h2>A Taste of Urban Bites</h2>
+                </div>
+
+
+                <div class="gallery-grid">
+
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=75&auto=format&fit=crop" alt="Grilled food" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=75&auto=format&fit=crop" alt="Restaurant interior" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=75&auto=format&fit=crop" alt="Fresh healthy meal" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=75&auto=format&fit=crop" alt="Delicious restaurant food" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=75&auto=format&fit=crop" alt="Restaurant dining area" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=75&auto=format&fit=crop" alt="Food presentation" loading="lazy">
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- Contact Section -->
+            <section class="contact" id="contact">
+
+                <div class="contact-content">
+                    <p class="section-label">COME VISIT US</p>
+
+                    <h2>Good Food Is<br>Always Worth It.</h2>
+
+                    <p>We look forward to welcoming you.</p>
+
+                    <a href="https://wa.me/2348118058969" class="primary-button" target="_blank" rel="noopener noreferrer">Contact Us on WhatsApp</a>
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+
+            <div class="container footer-content">
+
+                <a href="#" class="logo">URBAN<span>BITES.</span></a>
+
+                <p>© 2026 Urban Bites. All rights reserved.</p>
+
+            </div>
+
+        </footer>
+
+
+        <!-- JavaScript -->
+        <script src="script.js"></script>
+
+
+    </body>
+    <!-- FLOATING WHATSAPP BUTTON -->
+
+    <a href="https://wa.me/2348118058969"
+    class="floating-whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with Urban Bites on WhatsApp">
+
+        <span>Chat with us</span>
+
+    </a>
+</html>

@@ -1,0 +1,710 @@
+/* =========================
+   1. GLOBAL STYLING
+========================= */
+
+:root {
+    --gold: #D7A64B;
+    --dark: #171717;
+    --cream: #F5F0E8;
+    --white: #FFFFFF;
+    --gray: #777777;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--cream);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================
+   2. NAVIGATION BAR
+========================= */
+
+.header {
+    width: 100%;
+    background-color: var(--dark);
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar {
+    min-height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+/* NAVIGATION LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: var(--white);
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* NAVIGATION BUTTON */
+
+.nav-button {
+    background-color: var(--gold);
+    color: var(--dark);
+    padding: 12px 22px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: var(--white);
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   3. HERO SECTION
+========================= */
+
+.hero {
+    min-height: 780px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.72)
+        ),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-subtitle {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    color: #dddddd;
+    font-size: 17px;
+    max-width: 550px;
+    margin-bottom: 35px;
+}
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 15px 27px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.primary-button {
+    background-color: var(--gold);
+    color: var(--dark);
+}
+
+.primary-button:hover {
+    background-color: var(--white);
+    transform: translateY(-3px);
+}
+
+.secondary-button {
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+.secondary-button:hover {
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+
+/* =========================
+   4. RESPONSIVE NAVIGATION
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-button {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+}
+
+/* =========================
+   5. ABOUT SECTION
+========================= */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+.about-image {
+    min-height: 450px;
+    background-image: url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900");
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.about-content {
+    max-width: 500px;
+}
+
+.section-label {
+    color: #B88932;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.about-content h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.about-content p:not(.section-label) {
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.text-link {
+    color: #A87927;
+    font-weight: 700;
+    border-bottom: 1px solid #A87927;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.text-link:hover {
+    color: #171717;
+    border-color: #171717;
+}
+
+
+/* ABOUT SECTION RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .about-image {
+        min-height: 320px;
+    }
+
+    .about-content h2 {
+        font-size: 38px;
+    }
+}
+
+/* =========================
+   6. FOOD MENU SECTION
+========================= */
+
+.menu {
+    padding-top: 90px;
+    padding-bottom: 110px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.section-heading > p:not(.section-label) {
+    color: #777777;
+    font-size: 16px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.food-card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.food-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.food-info {
+    padding: 22px;
+}
+
+.food-info h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.food-info p {
+    color: #777777;
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 72px;
+    margin-bottom: 15px;
+}
+
+.food-info span {
+    color: #B88932;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* MENU RESPONSIVENESS */
+
+@media (max-width: 1000px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+}
+
+/* =========================
+   7. FOOD GALLERY
+========================= */
+
+.gallery {
+    padding-top: 80px;
+    padding-bottom: 110px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.gallery-item {
+    height: 280px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* GALLERY RESPONSIVENESS */
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-item {
+        height: 220px;
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   8. CONTACT SECTION
+========================= */
+
+.contact {
+    background-color: #171717;
+    padding: 100px 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.contact-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact-content h2 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.contact-content > p:not(.section-label) {
+    color: #cccccc;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+
+/* =========================
+   9. FOOTER
+========================= */
+
+.footer {
+    background-color: #101010;
+    padding: 30px 0;
+    color: #FFFFFF;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-content p {
+    color: #999999;
+    font-size: 13px;
+}
+
+
+/* CONTACT AND FOOTER RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    .contact-content h2 {
+        font-size: 38px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* =========================
+   10. MOBILE NAVIGATION
+========================= */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 27px;
+    height: 3px;
+    background-color: #FFFFFF;
+    margin: 5px 0;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: relative;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        background-color: #171717;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 0;
+        gap: 25px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* =========================
+   11. SCROLL ANIMATIONS
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* HERO MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 650px;
+        padding: 70px 6%;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        gap: 12px;
+    }
+
+    .primary-button,
+    .secondary-button {
+        padding: 13px 18px;
+        font-size: 13px;
+    }
+}
+
+/* =========================
+   12. WHATSAPP ORDER BUTTON
+========================= */
+
+.order-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 11px 16px;
+    background-color: #171717;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #D7A64B;
+    color: #171717;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   13. FOOD QUANTITY CONTROL
+========================= */
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.quantity-control label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.quantity-input {
+    width: 65px;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.quantity-input:focus {
+    border-color: #D7A64B;
+}
+
+/* =========================
+   14. FLOATING WHATSAPP BUTTON
+========================= */
+
+.floating-whatsapp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 2000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 22px;
+    background-color: #25D366;
+    color: #FFFFFF;
+
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 600px) {
+
+    .floating-whatsapp {
+        right: 15px;
+        bottom: 15px;
+        padding: 13px 18px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 480px) {
+    .floating-whatsapp {
+        display: none;
+    }
+}
